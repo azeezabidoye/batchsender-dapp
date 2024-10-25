@@ -18,7 +18,7 @@ contract BatchsenderTest is Test {
         recipients[0] = payable(0x6c5fa1b41990f4ee402984Bcc8Bf6F4CB769fE74);
         recipients[1] = payable(0x55829bC84132E1449b62607B1c7bbC012f0326Ac);
         amounts[0] = 100; //wei
-        amounts[1] = 200; //wei
+        amounts[1] = 100; //wei
         batchsender.sendToken{value: 300}(recipients, amounts);
         assertEq(address(recipients[0]).balance, amounts[0]);
         assertEq(address(recipients[1]).balance, amounts[1]);
