@@ -18,7 +18,7 @@ contract BatchsenderScript is Script {
 
         // Log Account to console
         address account = vm.addr(privateKey);
-        console.log("Deployer Account address: ", account);
+        console.log("Deployer Account", account);
 
         batchsender = new Batchsender();
 
